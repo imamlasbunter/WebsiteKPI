@@ -25,6 +25,12 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="MudBlazor" Version="6.0.14" />
     <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="3.0.0" />
     <PackageReference Include="NWebsec.AspNetCore.Mvc.TagHelpers" Version="3.0.0" />
@@ -34,9 +40,13 @@
     <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\02.Domain\02.Domain.csproj" />
+    <ProjectReference Include="..\04.Application\04.Application.csproj" />
     <ProjectReference Include="..\07.Client\07.Client.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Pages\Admin\beranda\Headers-slide.razor" />
+    <None Include="Pages\Admin\beranda\Input-headers-slide.razor" />
     <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\FUNDING.yml" />
     <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\ISSUE_TEMPLATE\bug_report.md" />
     <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\ISSUE_TEMPLATE\feature_request.md" />

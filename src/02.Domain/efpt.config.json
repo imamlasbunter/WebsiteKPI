@@ -1,0 +1,219 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "Website_KPIContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Entities\/DatabaseContext",
+   "OutputPath": "Entities",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Pertamina.Website_KPI.Domain",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[logActivitas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_afiliasi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_anggaran_dasar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_dewan_komisaris]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_direksi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_fokus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_galery_photo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_header_up]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_ikhtisar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_ikhtisar_keuangan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_ikhtisar_program]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_inisiatif]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_inovasi_bisnis]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_inovasi_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_internal_audit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_jejak_langkah]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_keberlanjutan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_kebijakan_korupsi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_kebijakan_manager]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_kode_etik]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_komite]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_komite_audit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_komite_investasi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_komite_remun]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_laporan_keberlanjutan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_laporan_keuangan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_laporan_tahunan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_penghargaan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_piagam_direksi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_piagam_komisaris]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_profil_perusahaan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_profile_popup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_regional]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_rups]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_rups_history]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_sekretaris_perusahaan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_sertifikat]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_strategi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_2card]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_3card]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_organisasi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblt_struktur_pemegangsaham]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "laptop-pb6pl6f5.Website_KPI.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

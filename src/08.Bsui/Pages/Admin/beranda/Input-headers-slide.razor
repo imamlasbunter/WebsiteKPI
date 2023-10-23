@@ -1,0 +1,88 @@
+﻿@page "/kpi-pages/beranda/input-headers-slide"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+@using Pertamina.Website_KPI.Application.Beranda;
+@using Pertamina.Website_KPI.Bsui.Layouts;
+@using Pertamina.Website_KPI.Domain.Entities;
+@layout AdminLayout
+
+@inject HeaderUpServices _headerServices;
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Input Header Slide</h5></li>
+            <li class="breadcrumb-item">
+                <a href="index.html">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Header Slide</a></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+
+                            <form>
+                                <div class="row">
+                                    <div class="col-xl-6 mb-3">
+                                        <label class="form-label">Title<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" @bind="@objItem.Title" placeholder="Input Title Content" required>
+                                    </div>
+                                    <div class="col-xl-6 mb-3">
+                                        <label class="form-label">Subtitle Content<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" @bind="@objItem.Subtitle" placeholder="Input Title Content" required>
+                                    </div>
+                                    <div class="col-xl-6 mb-3">
+                                        <label class="form-label">Reference Link<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" @bind="@objItem.LinkTo" placeholder="Input Reference Link" required>
+                                    </div>
+                                    <div class="col-xl-6 mb-3">
+                                        <label class="form-label">Status<span class="text-danger">*</span></label>
+                                        <select class="form-control" required>
+                                            <option value="" selected>-- Pilih --</option>
+                                            <option value="1" selected>Aktif</option>
+                                            <option value="0" selected>Tidak Aktif</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-danger light ms-1">Cancel</button>
+                                    <button type="Soraya" class="btn btn-danger" @onclick="OnSave">Submit</button>
+                                    @* <input type="button" class="btn btn-primary light ms-1" value="Submit" @onclick="OnSave" /> *@
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+@code {
+    private TbltHeaderUp objItem = new();
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+
+    protected void OnSave()
+    {
+        //_ = await _headerServices.Add(objItem);
+    }
+}

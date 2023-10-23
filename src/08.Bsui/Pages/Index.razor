@@ -1,6 +1,12 @@
 @page "/"
+@using Pertamina.Website_KPI.Application.Beranda;
+@using Pertamina.Website_KPI.Domain.Entities;
 
 <PageTitle>Kilang Pertamina International</PageTitle>
+
+@inject HeaderUpServices _headerServices;
+@inject RegionalServices _regionalServices;
+@inject AfiliasiServices _afiliasiServices;
 
 <div>
     <div id="rs-slider" class="rs-slider slider3 rs-slider-style4 relative mt-n40">
@@ -11,23 +17,35 @@
                      data-src="https://phe.pertamina.com/assets/images/banner/masthead2.jpg?format=webp" alt="" title="#slide-2" />
 
             </div>
-            <div id="slide-2" class="slider-direction">
-                <div class="content-part">
-                    <div class="container" style="width: 80%;">
-                        <div class="slider-des">
-                            <div class="sl-subtitle">Lorem Ipsum,</div>
-                            <h2 class="sl-title">Dolor sit amet constentua</h2>
-                        </div>
-                        @* <div class="desc">
+
+
+            @{
+                if (@itemsHeader.Count > 0)
+                {
+                    for (int i = 0; i < itemsHeader.Count; i++)
+                    {
+                        <div id="slide-2" class="slider-direction">
+                            <div class="content-part">
+                                <div class="container width-blog">
+                                    <div class="slider-des">
+                                        <div class="sl-subtitle">@itemsHeader[i].Title</div>
+                                        <h2 class="sl-title">@itemsHeader[i].Subtitle</h2>
+                                    </div>
+                                    @* <div class="desc">
                         <div class="draw-line start-draw"></div>
 
                         </div>*@
-                        <div class="slider-bottom ">
-                            <a class="readon2 consultant slider" href="/en/company/milestone">Lorem Ipsum Dolor</a>
+                                    <div class="slider-bottom ">
+                                        <a class="readon2 consultant slider" href="@itemsHeader[i].LinkTo">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    }
+                }
+            }
+
+
         </div>
     </div>
 
@@ -268,30 +286,34 @@
         </div>
     </div>
 
-    <div class="pt-20 pb-20 white-bg2" id="SectionSubsidiary" >
+    <div class="pt-20 pb-20 white-bg2" id="SectionSubsidiary">
         <div class="container" style="width: 80%;">
             <div class="sec-title4 text-center mb-16">
                 <h3 class="title primary-color md:text-5xl">Regional</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mb-10">
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="https://pdsi.pertamina.com/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-sm mb-1">Refinery II</h3>
-                        <h3 class="uppercase font-bold text-xl mb-1">Dumai</h3>
-                    </a>
-                </div>
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="https://pdsi.pertamina.com/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-sm mb-1">Refinery III</h3>
-                        <h3 class="uppercase font-bold text-xl mb-1">PLAJU</h3>
-                    </a>
-                </div>
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="http://badaklng.com/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-sm mb-1">Refinery IV</h3>
-                        <h3 class="uppercase font-bold text-xl mb-1">CILACAP</h3>
-                    </a>
-                </div>
+
+                @{
+                    if (itemsRegional.Count > 0)
+                    {
+                        foreach (var item in itemsRegional.ToList())
+                        {
+                            <div class="bg-white rounded-full shadow-2xl text-center p-4">
+                                <a href="@item.LinkTo" target="_blank">
+                                    <h3 class="primary-color2 font-bold text-sm mb-1">@item.Title</h3>
+                                    <h3 class="uppercase font-bold text-xl mb-1">@item.Subtitle</h3>
+                                </a>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="bg-white rounded-full shadow-2xl text-center p-4">
+                            Data not found
+                        </div>
+                    }
+                }
+
             </div>
             <div class="sec-title4 text-center mb-16">
                 <h3 class="title primary-color md:text-5xl"></h3>
@@ -326,24 +348,26 @@
                 <h3 class="title primary-color md:text-5xl">Afiliasi</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mb-10">
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="https://www.elnusa.co.id/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-xl mb-1">KPB</h3>
-                        <h3 class="font-bold text-sm mb-1">Kilang Pertamina Balikpapan</h3>
-                    </a>
-                </div>
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="https://pdsi.pertamina.com/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-xl mb-1">PRPP</h3>
-                        <h3 class="font-bold text-sm mb-1">Pertamina Rosneft Pengolahan & Petrokimia</h3>
-                    </a>
-                </div>
-                <div class="bg-white rounded-full shadow-2xl text-center p-4">
-                    <a href="http://badaklng.com/" target="_blank">
-                        <h3 class="primary-color2 font-bold text-xl mb-1">TPI Group</h3>
-                        <h3 class="font-bold text-sm mb-1">Tuban Petrochemical Industries Group</h3>
-                    </a>
-                </div>
+
+                @if (itemsAfiliasi.Count > 0)
+                {
+                    foreach (var item in itemsAfiliasi.ToList())
+                    {
+                        <div class="bg-white rounded-full shadow-2xl text-center p-4">
+                            <a href="@item.LinkTo" target="_blank">
+                                <h3 class="primary-color2 font-bold text-xl mb-1">@item.Title</h3>
+                                <h3 class="font-bold text-sm mb-1">@item.Subtitle</h3>
+                            </a>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="bg-white rounded-full shadow-2xl text-center p-4">
+                        Data not found
+                    </div>
+                }
+
             </div>
         </div>
     </div>
@@ -401,17 +425,17 @@
         <div class="container" style="width: 80%;">
             <div class="row">
                 <div class="col-lg-6 order-md-1">
-                        <div class="right-side ml-3">
+                    <div class="right-side ml-3">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/uWJ3vtU0OZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <br /><br />
+                    </div>
+                    <br /><br />
                 </div>
                 <div class="col-lg-6 md-pt-50">
                     <div class="sec-title4 mb-30">
                         <div class="c-title-blue mb-3">MEDIA DAN INFORMASI</div>
                         <h2 class="title primary-color md:text-5xl">Video</h2>
-                            <h3 class="font-bold text-xl mb-1" style="text-align:right">Keterbukaan Informasi</h3>
-                            <p class="text-right">Dalam memenuhi kebutuhan informasi bagi masyarakat, Pertamina memberikan akses yang luas untuk dapat mencari informasi seputar kegiatan energi di Indonesia</p>
+                        <h3 class="font-bold text-xl mb-1" style="text-align:right">Keterbukaan Informasi</h3>
+                        <p class="text-right">Dalam memenuhi kebutuhan informasi bagi masyarakat, Pertamina memberikan akses yang luas untuk dapat mencari informasi seputar kegiatan energi di Indonesia</p>
                     </div>
                     <div class="btn-part text-right">
                         <a class="button" href="/en/company/profile">
@@ -488,12 +512,28 @@
     <br /><br /><br /><br /><br /><br />
     <div class="pt-20 pb-20 white-bg2" id="SectionSubsidiary">
         <div class="container" style="width: 80%;">
-                <div class="btn-part text-right">
-                    <a class="button" href="/en/company/profile">
-                        Pelajari Lebih Lanjut
-                    </a>
-                </div>
+            <div class="btn-part text-right">
+                <a class="button" href="/en/company/profile">
+                    Pelajari Lebih Lanjut
+                </a>
             </div>
-            </div>
-            <br /><br />
+        </div>
+    </div>
+    <br /><br />
 </div>
+
+@code {
+    private List<TbltHeaderUp> itemsHeader = new();
+    private List<TbltRegional> itemsRegional = new();
+    private List<TbltAfiliasi> itemsAfiliasi = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        itemsHeader = await _headerServices.GetData();
+        itemsRegional = await _regionalServices.GetData();
+        itemsAfiliasi = await _afiliasiServices.GetData();
+
+        _ = base.OnInitializedAsync();
+    }
+
+}
