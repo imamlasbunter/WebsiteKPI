@@ -1,0 +1,58 @@
+﻿
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.Extensions.Options
+@using IdentityModel
+@using Pertamina.Website_KPI.Bsui.Services.AppInfo
+@using Pertamina.Website_KPI.Bsui.Services.Authentication
+@using Pertamina.Website_KPI.Bsui.Services.FrontEnd
+@using Pertamina.Website_KPI.Shared.Common.Constants
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link href="Pertamina.Website_KPI.Bsui.styles.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+
+<body>
+    @RenderBody()
+
+    @*Main*@
+    <script src="_framework/blazor.server.js"></script>
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/skill.bars.jquery.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/inc/custom-slider/js/jquery.nivo.slider.js"></script>
+    <script src="assets/js/jquery.lazy.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    @*Admin*@
+    <script src="admin/vendor/global/global.min.js"></script>
+    <script src="admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <!--select plugins-file-->
+    <script src="admin/vendor/select2/js/select2.full.min.js"></script>
+    <script src="admin/js/plugins-init/select2-init.js"></script>
+    <!-- ck-editor -->
+    <script src="admin/vendor/ckeditor/ckeditor.js"></script>
+    <!-- Dashboard 1 -->
+    <script src="admin/js/dashboard/cms.js"></script>
+    <script src="admin/js/custom.js"></script>
+    <script src="admin/js/deznav-init.js"></script>
+    <script src="admin/js/styleSwitcher.js"></script>
+</body>
+</html>

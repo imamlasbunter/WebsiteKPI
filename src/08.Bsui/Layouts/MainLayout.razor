@@ -1,0 +1,144 @@
+﻿@using Darnton.Blazor.DeviceInterop.Geolocation
+@using Pertamina.Website_KPI.Bsui.Services.AppInfo
+@using Pertamina.Website_KPI.Bsui.Services.Authentication
+@using Pertamina.Website_KPI.Bsui.Services.Authentication.Components
+@using Pertamina.Website_KPI.Bsui.Services.Geolocation
+@using Pertamina.Website_KPI.Bsui.Services.Geolocation.Components
+@using Pertamina.Website_KPI.Bsui.Services.HealthCheck.Components
+@using Pertamina.Website_KPI.Bsui.Services.Telemetry
+@using Pertamina.Website_KPI.Bsui.Services.Telemetry.ApplicationInsights.Components
+
+@inherits LayoutComponentBase
+
+@inject IOptions<AppInfoOptions> _appInfoOptions
+@inject IOptions<AuthenticationOptions> _authenticationOptions
+@inject IOptions<GeolocationOptions> _geolocationOptions
+@inject IOptions<TelemetryOptions> _telemetryOptions
+
+@inject AuthenticationStateProvider _authenticationStateProvider
+@inject IGeolocationService _geolocationService
+
+
+<PageTitle>Kilang Pertamina International</PageTitle>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/off-canvas.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/inc/custom-slider/css/nivo-slider.css" />
+    <link rel="stylesheet" type="text/css" href="assets/inc/custom-slider/css/preview.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/rs-spacing.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/MainLayout.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+    @*Header*@
+    <div b-jngd5uu4s0 class="offwrap"></div>
+
+    <div b-jngd5uu4s0 class="main-content text-sm">
+
+        <div class="full-width-header">
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header style2 header-transparent">
+                <NavMenu />
+            </header>
+            <!--Header End-->
+        </div>
+    </div>
+    @*End Header*@
+
+    <!--Preloader start here-->
+    <div id="pre-load">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+               @* <div class='loader-icon'>
+                    <img class="h-auto lazy"
+                         src="/assets/images/KPIlogo.png"
+                         data-src="/assets/images/KPIlogo.png"
+                         alt="loading">
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <!--Preloader area end here-->
+
+    @*Content*@
+    @Body
+    @*End Content*@
+
+    @*Footer*@
+    <div class="rs-footer relative text-center">
+        <div class="bg-wrap">
+            <div class="footer-content pt-20 pb-10">
+                <div class="container width-blog">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 md-md-30">
+                            <div class="about-widget text-left">
+                                <div class="logo-area">
+                                    <a href="/">
+                                        <img class="h-auto lazy" src="/assets/images/KPI logo (1).png" data-src="/assets/images/KPI logo (1).png" srcset="/assets/images/KPI logo (1).png" alt="Footer Logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 md-md-30">
+                            <div class="about-widget text-left">
+                                <div class="quicklinks-widget widget text-left">
+                                    <h4 class="widget-title">Our Site</h4>
+                                    <ul>
+                                        <li><a href="/en/privacy">Site Map</a></li>
+                                        <li><a href="#">Whistleblowing</a></li>
+                                        <li><a href="#">E-Procurement</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 md-md-30">
+                            <div class="about-widget text-left">
+                                <div class="legal-widget widget text-left">
+                                    <h4 class="widget-title">Follow Us</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.instagram.com/phe.pertamina" target="_blank"><i class="fa fa-instagram text-xl mr-2 w-7 align-middle"></i></a>
+                                            <a href="https://www.facebook.com/pertamina.h.energi" target="_blank"><i class="fa fa-facebook text-xl mr-2 w-7 align-middle"></i></a>
+                                            <a href="https://www.linkedin.com/company/phepertamina/" target="_blank"><i class="fa fa-linkedin text-xl mr-2 w-7 align-middle"></i></a>
+                                            @*<a href="https://www.youtube.com/phe.pertamina7070" target="_blank"><i class="fa fa-youtube-play text-xl mr-2 w-7 align-middle"></i></a>*@
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 col-sm-12 md-md-30">
+                            <div class="about-widget text-left">
+                                <div class="legal-widget widget text-left">
+                                    <h4 class="widget-title">Contact</h4>
+                                    <div class="text-white">
+                                        <p>Contact Us</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <hr class="text-white">
+                </div>
+            </div>
+            @* <div class="footer-bottom text-center">
+            <div class="container">
+            <p class="copyright">PT Pertamina Hulu Energi © Copyright 2023. All rights reserved.</p>
+            </div>
+            </div>*@
+        </div>
+    </div>
+    @*End Footer*@
+</body>
+
+

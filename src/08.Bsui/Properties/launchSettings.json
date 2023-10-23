@@ -1,0 +1,16 @@
+{
+  "profiles":
+  {
+    "Pertamina.Website_KPI.Bsui":
+    {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:44302",
+      "environmentVariables":
+      {
+        "ASPNETCORE_ENVIRONMENT": "Local"
+      }
+    }
+  }
+}

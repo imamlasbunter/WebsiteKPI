@@ -1,0 +1,86 @@
+﻿@page "/hubungikami"
+
+<div class="rs-breadcrumbs -mt-20 lazy" style="background-image: url(../../assets/images/foto/Rectangle-1.png)">
+    <div class="container width-blog">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">
+                Hubungi Kami
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="rs-about style2 pt-100 pb-100 md-pt-70 md-pb-70">
+    <div class="container width-blog">
+        <div class="sec-title text-left mb-14">
+            <h2 class="title title2 primary-color3 mb-14">
+                Kirim Pesan
+            </h2>
+        </div>
+        <div class="rs-contact contact-style2 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row col-lg-8a">
+                    <div class="col-lg-6 md:pl-7">
+                        <div class="contact-wrap">
+                            <div id="form-messages"></div>
+                            <form id="contact-form" action="/api/public/contactus" method="POST">
+                                    <div class="row">
+                                        <div class="col-md mb-2">
+                                            <div class="form-floating">
+                                                <input class="from-control rounded-full" type="text" id="name" name="Fullname"
+                                                       placeholder="Nama Lengkap" required>
+                                                <span class="error text-danger display-none Fullname"></span>
+                                            </div>
+                                        </div>
+                                    <div class="col-md mb-2">
+                                            <div class="form-floating">
+                                                <input class="from-control rounded-full" type="text" id="email" name="Email"
+                                                       placeholder="Email" required>
+                                                <span class="error text-danger display-none email"></span>
+                                            </div>
+                                        </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+                                        <input class="from-control rounded-full" type="text" id="judul" name="JudulPesan"
+                                               placeholder="Judul Pesan" required>
+                                        <span class="error text-danger display-none JudulPesan"></span>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+                                        <select class="from-control rounded-full" name="Topik" id="Topik" style="text-transform: capitalize;" required>
+                                            <option value="UMUM">UMUM</option>
+                                            <option value="PROCUREMENT">PROCUREMENT</option>
+                                            <option value="HRD">HRD</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12 mb-2">
+                                        <textarea class="from-control rounded-[24px] resize-none" id="message" name="message"
+                                                  placeholder="Pesan anda" required></textarea>
+                                        <span class="error text-danger display-none message"></span>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+                                        <input class="from-control rounded-full" type="text" id="security" name="Security"
+                                               placeholder="Security Code" required>
+                                        <span class="error text-danger display-none SecurityCode"></span>
+                                    </div>
+                                    </div>
+                                    <div class="btn-part">
+                                    <div class="form-group mt-5 text-right">
+                                            <input class="button border-0" type="submit" value="Kirim Pesan">
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 md-mb-50 md:pr-6">
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.722631838559!2d106.83113481486846!3d-6.300130595440313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1da8dc9bb73%3A0xb8893271b7345d4b!2sPHE%20Tower!5e0!3m2!1sen!2sid!4v1655036382068!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+}

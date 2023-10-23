@@ -1,0 +1,51 @@
+﻿@using Darnton.Blazor.DeviceInterop.Geolocation
+@using Pertamina.Website_KPI.Bsui.Services.AppInfo
+@using Pertamina.Website_KPI.Bsui.Services.Authentication
+@using Pertamina.Website_KPI.Bsui.Services.Authentication.Components
+@using Pertamina.Website_KPI.Bsui.Services.Geolocation
+@using Pertamina.Website_KPI.Bsui.Services.Geolocation.Components
+@using Pertamina.Website_KPI.Bsui.Services.HealthCheck.Components
+@using Pertamina.Website_KPI.Bsui.Services.Telemetry
+@using Pertamina.Website_KPI.Bsui.Services.Telemetry.ApplicationInsights.Components
+
+@inherits LayoutComponentBase
+
+@inject IOptions<AppInfoOptions> _appInfoOptions
+@inject IOptions<AuthenticationOptions> _authenticationOptions
+@inject IOptions<GeolocationOptions> _geolocationOptions
+@inject IOptions<TelemetryOptions> _telemetryOptions
+
+@inject AuthenticationStateProvider _authenticationStateProvider
+@inject IGeolocationService _geolocationService
+
+
+<PageTitle>Login Page</PageTitle>
+
+
+<head>
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link href="admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="admin/css/style.css" rel="stylesheet">
+</head>
+
+<body class="vh-100">
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    @Body
+
+</body>
+
+

@@ -1,0 +1,110 @@
+﻿@page "/admin"
+@using Pertamina.Website_KPI.Bsui.Layouts;
+@layout AdminLayout
+
+<div class="content-body">
+    <!-- row -->
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">dashboard</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m2.125 6.375l8.5 1.41667l14.875 6.375v14.1667c14.875 14.5424 14.7257 14.9027 14.4601 15.1684c14.1944 15.4341 13.8341 15.5833 13.4583 15.5833h3.54167c3.16594 15.5833 2.80561 15.4341 2.53993 15.1684c2.27426 14.9027 2.125 14.5424 2.125 14.1667v6.375z" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="m6.375 15.5833v8.5h10.625v15.5833" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">dashboard</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasexample1" role="button" aria-controls="offcanvasexample1">+ add task</a>
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="mb-0">dashboard summary</h5>
+            <div class="d-flex align-items-center">
+                <div class="icon-box  icon-box-sm task-tab me-2">
+                    <a href="task-summary.html">
+                        <svg width="20" height="20" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m8.50032 3h2.66699v8.83333h8.50032v3z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="m17.6668 3h11.8335v8.83333h17.6668v3z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="m17.6668 12.1667h11.8335v18h17.6668v12.1667z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="m8.50032 12.1667h2.66699v18h8.50032v12.1667z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#examplemodal">+ add task</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row task">
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-primary count">8</h2>
+                                        <span>not started</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-purple count">7</h2>
+                                        <span>in progress</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-warning count">13</h2>
+                                        <span>testing</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-danger count">11</h2>
+                                        <span>awaiting</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-success count">21</h2>
+                                        <span>complete</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 col-6">
+                                <div class="task-summary">
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="text-danger count">16</h2>
+                                        <span>pending</span>
+                                    </div>
+                                    <p>tasks assigne</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+}

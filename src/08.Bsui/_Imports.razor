@@ -1,0 +1,32 @@
+﻿@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.Extensions.Options
+@using Microsoft.JSInterop
+
+@using Blazored.FluentValidation
+@using MudBlazor
+@using MudBlazor.Dialog
+
+@using Pertamina.Website_KPI.Shared.Common.Constants
+@using Pertamina.Website_KPI.Shared.Common.Extensions
+@using Pertamina.Website_KPI.Shared.Services.Authentication.Constants
+@using Pertamina.Website_KPI.Shared.Services.Authorization.Constants
+@using Pertamina.Website_KPI.Shared.Services.UserProfile.Constants
+
+@using Pertamina.Website_KPI.Client.Services.BackEnd
+@using Pertamina.Website_KPI.Client.Services.UserInfo
+
+@using Pertamina.Website_KPI.Bsui.Common.Components
+@using Pertamina.Website_KPI.Bsui.Common.Constants
+@using Pertamina.Website_KPI.Bsui.Common.Extensions
+
+@inject NavigationManager _navigationManager
+@inject ISnackbar _snackbar
+@inject IDialogService _dialogService
+
+@inject UserInfoService _userInfo

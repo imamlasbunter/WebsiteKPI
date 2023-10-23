@@ -1,0 +1,10 @@
+﻿$env:ASPNETCORE_ENVIRONMENT='Local'
+dotnet tool update --global dotnet-ef
+
+dotnet ef migrations add MySqlWebsite_KPIDbContext_001_InitialSchema --context MySqlWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi --output-dir Persistence/MySql/Migrations
+
+dotnet ef migrations remove  --context MySqlWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi
+
+dotnet ef database update --context MySqlWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi
+
+dotnet ef database drop --force --context MySqlWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi

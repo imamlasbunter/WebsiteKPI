@@ -1,0 +1,11 @@
+﻿$env:ASPNETCORE_ENVIRONMENT='Local'
+set ASPNETCORE_ENVIRONMENT=Local
+dotnet tool update --global dotnet-ef
+
+dotnet ef migrations add SqlServerWebsite_KPIDbContext_001_InitialSchema --context SqlServerWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi --output-dir Persistence/SqlServer/Migrations
+
+dotnet ef migrations remove  --context SqlServerWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi
+
+dotnet ef database update --context SqlServerWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi
+
+dotnet ef database drop --force --context SqlServerWebsite_KPIDbContext --project src/05.Infrastructure --startup-project src/06.WebApi

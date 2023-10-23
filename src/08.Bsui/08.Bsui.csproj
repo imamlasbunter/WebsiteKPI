@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Pertamina.Website_KPI.Bsui</AssemblyName>
+    <RootNamespace>Pertamina.Website_KPI.Bsui</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AdminPages\**" />
+    <Compile Remove="Pages\Main\NewFolder\**" />
+    <Content Remove="AdminPages\**" />
+    <Content Remove="Pages\Main\NewFolder\**" />
+    <EmbeddedResource Remove="AdminPages\**" />
+    <EmbeddedResource Remove="Pages\Main\NewFolder\**" />
+    <None Remove="AdminPages\**" />
+    <None Remove="Pages\Main\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Extensions.AspNetCore.DataProtection.Blobs" Version="1.2.1" />
+    <PackageReference Include="Blazored.FluentValidation" Version="2.0.3" />
+    <PackageReference Include="Darnton.Blazor.DeviceInterop" Version="0.1.2" />
+    <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.8" />
+    <PackageReference Include="MudBlazor" Version="6.0.14" />
+    <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="3.0.0" />
+    <PackageReference Include="NWebsec.AspNetCore.Mvc.TagHelpers" Version="3.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Context" Version="4.6.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\07.Client\07.Client.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\FUNDING.yml" />
+    <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include="wwwroot\admin\vendor\jquery-smartwizard\.github\pull_request_template.md" />
+    <None Include="wwwroot\admin\vendor\tagify\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include="wwwroot\admin\vendor\tagify\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include="wwwroot\admin\vendor\tagify\.github\ISSUE_TEMPLATE\help-with-something.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Admin\hubungan-investor\" />
+    <Folder Include="Pages\Admin\keberlanjutan\" />
+    <Folder Include="Pages\Admin\tata-kelola\" />
+    <Folder Include="Pages\Admin\sosial\" />
+    <Folder Include="Pages\Admin\profil-perusahaan\" />
+  </ItemGroup>
+</Project>

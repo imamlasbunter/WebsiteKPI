@@ -1,0 +1,13 @@
+{
+  "profiles":
+  {
+    "Pertamina.Website_KPI.IntegrationTests":
+    {
+      "commandName": "Project",
+      "environmentVariables":
+      {
+        "ASPNETCORE_ENVIRONMENT": "Local"
+      }
+    }
+  }
+}

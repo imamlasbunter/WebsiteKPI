@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <link rel="apple-touch-icon" sizes="76x76" href="/Images/bnilifelogonew.png">
+ <link rel="icon" type="image/png" href="/Images/bnilifelogonew.png">
+  <title>
+    Generate Ext Letter
+  </title>
+    <link href="/Content/css/nucleo-icons.css" rel="stylesheet"/>
+
+    <link href="/Content/css/nucleo-svg.css" rel="stylesheet"/>
+
+    <link href="/Content/css/font-open-sans.css" rel="stylesheet"/>
+
+    <link href="/Content/aos.css" rel="stylesheet"/>
+  
+    <link href="/Content/css/jquery.dataTables.min.css" rel="stylesheet"/>
+
+    <link href="/Content/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="/Content/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet"/>
+
+</head>
+
+<body class="g-sidenav-show" style="background-color:#f1f7fd">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="/">
+        <img src="/Images/bnilifelogonew.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold"> Single View Dashboard</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main" style="height:400px">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>shop </title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(0.000000, 148.000000)">
+                        <path class="color-background opacity-6" d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"></path>
+                        <path class="color-background" d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+         
+          <li class="nav-item dropdown">
+          <a class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#submenu-app5" aria-expanded="false" href="#">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>office</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                        <g id="office" transform="translate(153.000000, 2.000000)">
+                        <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                        <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                        </g>
+                    </g>
+                    </g>
+                </g>
+                </svg>
+            </div>
+            <span class="nav-link-text ms-1">Transaction</span>
+          </a>
+            <div class="multi-level collapse" role="list" id="submenu-app5" aria-expanded="false">
+                <ul class="flex-column nav">
+                    <li>
+                        <a class="nav-link" href="/Transaction" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-book-half" viewBox="0 0 16 16">
+                                  <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Transaction Search</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Transaction/DeletedTransaction" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                               </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Deleted Transaction</span>
+                        </a>
+                    </li>
+
+
+                    </ul>
+                </div>
+              </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/CustomerSearch" >
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>credit-card</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(453.000000, 454.000000)">
+                        <path class="color-background opacity-6" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"></path>
+                        <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Customer Search</span>
+          </a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/PolicyDocument" >
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Policy Document</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/PolicyLetter" >
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Policy Letter</span>
+          </a>
+        </li>
+
+
+             <li class="nav-item dropdown">
+          <a class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#submenu-app6" aria-expanded="false" href="#">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>document</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(154.000000, 300.000000)">
+                        <path class="color-background opacity-6" d="M40,40 L36.3636364,40 L36.3636364,3.63636364 L5.45454545,3.63636364 L5.45454545,0 L38.1818182,0 C39.1854545,0 40,0.814545455 40,1.81818182 L40,40 Z"></path>
+                        <path class="color-background" d="M30.9090909,7.27272727 L1.81818182,7.27272727 C0.814545455,7.27272727 0,8.08727273 0,9.09090909 L0,41.8181818 C0,42.8218182 0.814545455,43.6363636 1.81818182,43.6363636 L30.9090909,43.6363636 C31.9127273,43.6363636 32.7272727,42.8218182 32.7272727,41.8181818 L32.7272727,9.09090909 C32.7272727,8.08727273 31.9127273,7.27272727 30.9090909,7.27272727 Z M18.1818182,34.5454545 L7.27272727,34.5454545 L7.27272727,30.9090909 L18.1818182,30.9090909 L18.1818182,34.5454545 Z M25.4545455,27.2727273 L7.27272727,27.2727273 L7.27272727,23.6363636 L25.4545455,23.6363636 L25.4545455,27.2727273 Z M25.4545455,20 L7.27272727,20 L7.27272727,16.3636364 L25.4545455,16.3636364 L25.4545455,20 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Report</span>
+          </a>
+            <div class="multi-level collapse" role="list" id="submenu-app6" aria-expanded="false">
+                <ul class="flex-column nav">
+                    <li>
+                        <a class="nav-link" href="/Report/BNI" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                                    <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+                                </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Report BNI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Report/BOD" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-hdd-stack-fill" viewBox="0 0 16 16">
+                                <path d="M2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
+                              </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Report BOD</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Report/OJK" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                                <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                            </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Report OJK</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Report/MasterTransaction" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+                              </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Master Transaction Data</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Report/OverdueTransaction" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-exclamation-square-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Overdue Transaction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/Report/HandlingComplaint" >
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                              
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3a416f" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                                </svg>
+                            </div>
+                            <span class="nav-link-text ms-1">Handling Complaint</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+          
+
+      </ul>
+    </div>     
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="#">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Single View Dashboard - CSD </li>
+          </ol>
+            <h6 class="font-weight-bolder mb-0">Generate Ext Letter</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+                    <div id='date-part' class="nav-link"></div>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+                 <div id='time-part' class="nav-link"></div>
+            </li>
+              <li class="nav-item nav-link"><span class="item-bar">|</span></li>
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-user me-sm-1"></i> Logged as anak.nugita <br />(User CCHU)
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-0">
+                  <a class="dropdown-item border-radius-md" href="/Account/Login">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <i class="fa fa-sign-out"></i>
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold" style="color:black;">&nbsp; Log Out</span> 
+                         
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+          <!DOCTYPE html>
+
+<html>
+   <head>
+            <title>Generate Ext Letter</title>
+                <link href="/Content/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+
+                <script src="/Scripts/js/jquery.dataTables.min.js"></script>
+
+                <script src="/Scripts/js/dataTables.bootstrap.min.js"></script>
+
+                <script src="/Scripts/js/jquery-3.5.1.js"></script>
+
+                <script>
+                    $(document).ready(function () {
+                        $("#example").DataTable({
+
+                        });
+                    });
+                </script>
+    </head>
+<form action="/Transaction?Length=14" class="custom" data-ajax="true" data-ajax-begin="beginPaging" data-ajax-failure="failurePaging" data-ajax-loading="#loading" data-ajax-method="get" data-ajax-mode="replace" data-ajax-success="successPaging" data-ajax-update="#table-GenerateDocument" id="frm-search-GenerateDocument" method="post"> <body>
+ <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+        
+<div class="container-fluid mt-3 shadow-lg p-3 mb-5 bg-white rounded">
+
+
+
+    <br /><br />
+
+    <div class="card-header card text-white bg-dark mb-3 text-center accordion"  data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    LETTER LIST
+</div>
+    <br />
+    <div class="card-responsive">
+        <div class="col table-responsive collapse show" id="collapseExample2">
+            <table id="example" class="table table-striped table-bordered">
+                <thead>
+                    <tr style="background:#37899c; color:white;">
+                         <th class="text-uppercase text-xs font-weight-bolder" style="font-size:small;text-align:center">Transaction Number</th>
+                         <th class="text-uppercase text-xs font-weight-bolder" style="font-size:small;text-align:center">Policy Number</th>
+                         <th class="text-uppercase text-xs font-weight-bolder" style="font-size:small;text-align:center">Document Name</th>
+                         <th class="text-uppercase text-xs font-weight-bolder" style="font-size:small;text-align:center">Reprint Times</th>
+                    </tr>                  
+                </thead>
+                <tbody>
+                      <div class="d-flex px-2 py-1">  
+                        <div class="d-flex flex-column justify-content-center"> 
+                                        <tr>
+                                            <td style="color:black;font-size:small;text-align:center;">CCH-2308-000192</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">BLDP1014113895</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">
+                                                  <u>
+                                                      <a href="/Transaction/DownloadRDL?TransactionNo=CCH-2308-000192&amp;PolicyNo=BLDP1014113895&amp;DocumentName=First%20Confirmation%20Letter"
+                                                    onclick="downloadAndReload(event, 'First Confirmation Letter')">First Confirmation Letter</a>
+                                                  </u>
+                                            </td>  
+                                            <td style="color:black;font-size:small;text-align:center;"> 3</td>                                      
+                                        </tr>
+                                        <tr>
+                                            <td style="color:black;font-size:small;text-align:center;">CCH-2308-000192</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">BLDP1014113895</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">
+                                                  <u>
+                                                      <a href="/Transaction/DownloadRDL?TransactionNo=CCH-2308-000192&amp;PolicyNo=BLDP1014113895&amp;DocumentName=Confirmation%20Letter%20Extension"
+                                                    onclick="downloadAndReload(event, 'Confirmation Letter Extension')">Confirmation Letter Extension</a>
+                                                  </u>
+                                            </td>  
+                                            <td style="color:black;font-size:small;text-align:center;"> 2</td>                                      
+                                        </tr>
+                                        <tr>
+                                            <td style="color:black;font-size:small;text-align:center;">CCH-2308-000192</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">BLDP1014113895</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">
+                                                  <u>
+                                                      <a href="/Transaction/DownloadRDL?TransactionNo=CCH-2308-000192&amp;PolicyNo=BLDP1014113895&amp;DocumentName=Complaint%20Explanation%20Letter"
+                                                    onclick="downloadAndReload(event, 'Complaint Explanation Letter')">Complaint Explanation Letter</a>
+                                                  </u>
+                                            </td>  
+                                            <td style="color:black;font-size:small;text-align:center;"> 1</td>                                      
+                                        </tr>
+                                        <tr>
+                                            <td style="color:black;font-size:small;text-align:center;">CCH-2308-000192</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">BLDP1014113895</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">
+                                                  <u>
+                                                      <a href="/Transaction/DownloadRDL?TransactionNo=CCH-2308-000192&amp;PolicyNo=BLDP1014113895&amp;DocumentName=Complaint%20Explanation%20Confirmation%20Letter"
+                                                    onclick="downloadAndReload(event, 'Complaint Explanation Confirmation Letter')">Complaint Explanation Confirmation Letter</a>
+                                                  </u>
+                                            </td>  
+                                            <td style="color:black;font-size:small;text-align:center;"> 0</td>                                      
+                                        </tr>
+                                        <tr>
+                                            <td style="color:black;font-size:small;text-align:center;">CCH-2308-000192</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">BLDP1014113895</td> 
+                                            <td style="color:black;font-size:small;text-align:center;">
+                                                  <u>
+                                                      <a href="/Transaction/DownloadRDL?TransactionNo=CCH-2308-000192&amp;PolicyNo=BLDP1014113895&amp;DocumentName=Complaint%20Settlement%20Confirmation%20Letter"
+                                                    onclick="downloadAndReload(event, 'Complaint Settlement Confirmation Letter')">Complaint Settlement Confirmation Letter</a>
+                                                  </u>
+                                            </td>  
+                                            <td style="color:black;font-size:small;text-align:center;"> 1</td>                                      
+                                        </tr>
+                        </div>
+                     </div>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</form></html>
+
+<script>
+    function downloadAndReload(event, documentName) {
+        event.preventDefault(); // Mencegah tindakan bawaan tautan
+        var downloadUrl = event.target.href; // URL unduhan
+
+        // Membuat permintaan unduhan menggunakan AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", downloadUrl, true);
+        xhr.responseType = "blob";
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var blob = xhr.response;
+                var link = document.createElement("a");
+                link.href = window.URL.createObjectURL(blob);
+                link.download = documentName + ".doc";
+                link.click();
+
+                // Memuat ulang halaman setelah unduhan selesai
+                location.reload();
+            }
+        };
+
+        xhr.send();
+    }
+</script>
+
+
+    <div class="container-fluid py-4"></div>
+       <div class="container-fluid py-2"></div>
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                      document.write(new Date().getFullYear())
+                </script>,
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">PT. BNI Life Insurance Version 3.0</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </main>
+  <!--   Core JS Files   -->
+    <script src="/Scripts/js/core/popper.min.js"></script>
+
+    <script src="/Scripts/js/core/bootstrap.min.js"></script>
+
+    <script src="/Scripts/js/plugins/perfect-scrollbar.min.js"></script>
+
+    <script src="/Scripts/js/plugins/smooth-scrollbar.min.js"></script>
+
+    <script src="/Scripts/js/plugins/chartjs.min.js"></script>
+
+    <script src="/Scripts/aos.js"></script>
+
+    <script src="/Scripts/jquery-3.0.0.js"></script>
+
+    <script src="/Scripts/bootstrap.bundle.js"></script>
+
+    <script src="/Scripts/jquery.dataTables.js"></script>
+<script src="/Scripts/dataTables.bootstrap4.js"></script>
+<script src="/Scripts/js/FontAwesome.js"></script>
+<script src="/Scripts/js/github-buttons.js"></script>
+
+    <script src="/Scripts/moment.js"></script>
+
+    <script src="/Scripts/date-eu.js"></script>
+
+    <script src="/Scripts/js/jquery-3.5.1.js"></script>
+
+    <script src="/Scripts/js/jquery.dataTables.min.js"></script>
+
+    <script src="/Scripts/js/dataTables.bootstrap.min.js"></script>
+
+    <script src="/Scripts/js/FontAwesome.js"></script>
+
+    <script src="/Scripts/js/github-buttons.js"></script>
+
+    <script src="/Scripts/vfs_fonts.js"></script>
+
+    <script src="/Scripts/buttons.html5.min.js"></script>
+
+    <script src="/Scripts/buttons.colVis.min.js"></script>
+
+    
+  <script>
+      jQuery(function ($) {
+          var path = window.location.href;
+          $('ul a').each(function () {
+              if (this.href === path) {
+                  $(this).addClass('active');
+              }
+          });
+      })
+
+      $(document).ready(function () {
+          var interval = setInterval(function () {
+              var momentNow = moment();
+              $('#date-part').html(momentNow.format('dddd, DD MMMM YYYY'));
+              $('#time-part').html(momentNow.format('A hh:mm:ss'));
+          }, 100);
+
+          //$('#stop-interval').on('click', function () {
+          //    clearInterval(interval);
+          //});
+      });
+      $(document).on('hidden.bs.modal', function (event) {
+          if ($('.modal:visible').length) {
+              $('body').addClass('modal-open');
+          }
+      });
+      //var ctx = document.getElementById("chart-bars").getContext("2d");
+
+      //new Chart(ctx, {
+      //    type: "bar",
+      //    data: {
+      //        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      //        datasets: [{
+      //            label: "Sales",
+      //            tension: 0.4,
+      //            borderWidth: 0,
+      //            borderRadius: 4,
+      //            borderSkipped: false,
+      //            backgroundColor: "#fff",
+      //            data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
+      //            maxBarThickness: 6
+      //        }, ],
+      //    },
+      //    options: {
+      //        responsive: true,
+      //        maintainAspectRatio: false,
+      //        plugins: {
+      //            legend: {
+      //                display: false,
+      //            }
+      //        },
+      //        interaction: {
+      //            intersect: false,
+      //            mode: 'index',
+      //        },
+      //        scales: {
+      //            y: {
+      //                grid: {
+      //                    drawBorder: false,
+      //                    display: false,
+      //                    drawOnChartArea: false,
+      //                    drawTicks: false,
+      //                },
+      //                ticks: {
+      //                    suggestedMin: 0,
+      //                    suggestedMax: 500,
+      //                    beginAtZero: true,
+      //                    padding: 15,
+      //                    font: {
+      //                        size: 14,
+      //                        family: "Open Sans",
+      //                        style: 'normal',
+      //                        lineHeight: 2
+      //                    },
+      //                    color: "#fff"
+      //                },
+      //            },
+      //            x: {
+      //                grid: {
+      //                    drawBorder: false,
+      //                    display: false,
+      //                    drawOnChartArea: false,
+      //                    drawTicks: false
+      //                },
+      //                ticks: {
+      //                    display: false
+      //                },
+      //            },
+      //        },
+      //    },
+      //});
+
+
+      //var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+      //var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
+
+      //gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
+      //gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+      //gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+
+      //var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 50);
+
+      //gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
+      //gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+      //gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
+
+      //new Chart(ctx2, {
+      //    type: "line",
+      //    data: {
+      //        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      //        datasets: [{
+      //            label: "Mobile apps",
+      //            tension: 0.4,
+      //            borderWidth: 0,
+      //            pointRadius: 0,
+      //            borderColor: "#cb0c9f",
+      //            borderWidth: 3,
+      //            backgroundColor: gradientStroke1,
+      //            fill: true,
+      //            data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+      //            maxBarThickness: 6
+
+      //        },
+      //          {
+      //              label: "Websites",
+      //              tension: 0.4,
+      //              borderWidth: 0,
+      //              pointRadius: 0,
+      //              borderColor: "#3A416F",
+      //              borderWidth: 3,
+      //              backgroundColor: gradientStroke2,
+      //              fill: true,
+      //              data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+      //              maxBarThickness: 6
+      //          },
+      //        ],
+      //    },
+      //    options: {
+      //        responsive: true,
+      //        maintainAspectRatio: false,
+      //        plugins: {
+      //            legend: {
+      //                display: false,
+      //            }
+      //        },
+      //        interaction: {
+      //            intersect: false,
+      //            mode: 'index',
+      //        },
+      //        scales: {
+      //            y: {
+      //                grid: {
+      //                    drawBorder: false,
+      //                    display: true,
+      //                    drawOnChartArea: true,
+      //                    drawTicks: false,
+      //                    borderDash: [5, 5]
+      //                },
+      //                ticks: {
+      //                    display: true,
+      //                    padding: 10,
+      //                    color: '#b2b9bf',
+      //                    font: {
+      //                        size: 11,
+      //                        family: "Open Sans",
+      //                        style: 'normal',
+      //                        lineHeight: 2
+      //                    },
+      //                }
+      //            },
+      //            x: {
+      //                grid: {
+      //                    drawBorder: false,
+      //                    display: false,
+      //                    drawOnChartArea: false,
+      //                    drawTicks: false,
+      //                    borderDash: [5, 5]
+      //                },
+      //                ticks: {
+      //                    display: true,
+      //                    color: '#b2b9bf',
+      //                    padding: 20,
+      //                    font: {
+      //                        size: 11,
+      //                        family: "Open Sans",
+      //                        style: 'normal',
+      //                        lineHeight: 2
+      //                    },
+      //                }
+      //            },
+      //        },
+      //    },
+      //});
+  </script>
+  <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+          var options = {
+              damping: '0.5'
+          }
+          Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+  </script>
+        <script src="/Scripts/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+﻿@page "/"
+
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.Extensions.Options
+@using IdentityModel
+@using Pertamina.Website_KPI.Bsui.Services.AppInfo
+@using Pertamina.Website_KPI.Bsui.Services.Authentication
+@using Pertamina.Website_KPI.Bsui.Services.FrontEnd
+@using Pertamina.Website_KPI.Shared.Common.Constants
+
+@namespace Pertamina.Website_KPI.Bsui.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+
+@inject IOptions<AppInfoOptions> _appInfoOptions
+@inject IOptions<FrontEndOptions> _frontEndOptions
+@inject IOptions<Services.Authentication.AuthenticationOptions> _authenticationOptions
+
+@{
+    var ipAddress = string.Empty;
+
+    var ptmnIpAddress = HttpContext.Request.Headers[HttpHeaderName.PtmnIpAddress].FirstOrDefault();
+
+    if (!string.IsNullOrWhiteSpace(ptmnIpAddress))
+    {
+        ipAddress = ptmnIpAddress;
+    }
+    else
+    {
+        var remoteIpAddress = HttpContext.Connection.RemoteIpAddress;
+
+        ipAddress = remoteIpAddress is not null ? remoteIpAddress.ToString() : DefaultTextFor.SystemBackgroundJob;
+    }
+
+    var initialApplicationState = new InitialApplicationState
+    {
+        IpAddress = ipAddress
+    };
+}
+
+<component type="typeof(App)" param-InitialApplicationState="initialApplicationState" render-mode="ServerPrerendered" />
